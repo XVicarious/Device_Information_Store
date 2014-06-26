@@ -60,7 +60,11 @@ namespace Device_Information_Store
 
         private void loadDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            XmlSerializer s = new XmlSerializer(Program.deviceStoreList.GetType());
+            using (TextReader w = new StreamReader("deviceList.xml"))
+            {
+                Program.deviceStoreList = (List<Device>)s.Deserialize(w);
+            }
         }
 
     }

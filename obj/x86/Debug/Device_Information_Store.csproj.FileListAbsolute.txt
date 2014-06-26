@@ -7,3 +7,12 @@ c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\De
 c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.exe
 c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.pdb
 c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.MainForm.resources
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.exe
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.pdb
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.AddComputerForm.resources
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.Form1.resources
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.MainForm.resources
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.Properties.Resources.resources
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\obj\x86\Debug\Device_Information_Store.csproj.GenerateResource.Cache
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\bin\Debug\Device_Information_Store.exe
+H:\Users\XVicarious\Documents\GitHub\Device_Information_Store\bin\Debug\Device_Information_Store.pdb

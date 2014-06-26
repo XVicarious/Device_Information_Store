@@ -36,6 +36,7 @@ namespace Device_Information_Store
         private void deviceList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             AddComputerForm cForm = new AddComputerForm((Computer)deviceList.SelectedItem);
+            cForm.MdiParent = Program.formMain;
             cForm.Show();
         }
 

@@ -19,7 +19,7 @@ namespace Device_Information_Store
         [XmlElement("OfficeKey")]
         public String officeKey;
         [XmlElement("PersistantRoutes")]
-        public List<Tuple<IPAddress, IPAddress, IPAddress>> persistantRoutes;
+        public List<Route> persistantRoutes;
         [XmlElement("ComputerUsers")]
         public List<String> computerUsers;
         [XmlElement("AttachedDevices")]
@@ -35,7 +35,7 @@ namespace Device_Information_Store
             windowsArchitecture = "x86_64";
             officeVersion = "";
             officeKey = "";
-            persistantRoutes = new List<Tuple<IPAddress, IPAddress, IPAddress>>();
+            persistantRoutes = new List<Route>();
             computerUsers = new List<String>();
             attachedDevices = new List<Device>();
             windowsKeys = new List<String>();
@@ -49,7 +49,7 @@ namespace Device_Information_Store
             windowsArchitecture = "x86_64";
             officeVersion = "";
             officeKey = "";
-            persistantRoutes = new List<Tuple<IPAddress, IPAddress, IPAddress>>();
+            persistantRoutes = new List<Route>();
             computerUsers = new List<String>();
             attachedDevices = new List<Device>();
             windowsKeys = new List<String>();
@@ -63,7 +63,7 @@ namespace Device_Information_Store
             this.windowsArchitecture = windowsArchitecture;
             officeVersion = "";
             officeKey = "";
-            persistantRoutes = new List<Tuple<IPAddress, IPAddress, IPAddress>>();
+            persistantRoutes = new List<Route>();
             computerUsers = new List<String>();
             attachedDevices = new List<Device>();
             windowsKeys = new List<String>();
