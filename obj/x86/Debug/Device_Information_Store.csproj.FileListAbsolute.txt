@@ -1,0 +1,9 @@
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.AddComputerForm.resources
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.Form1.resources
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.Properties.Resources.resources
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.csproj.GenerateResource.Cache
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\bin\Debug\Device_Information_Store.exe
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\bin\Debug\Device_Information_Store.pdb
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.exe
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.pdb
+c:\users\brian\documents\visual studio 2010\Projects\Device_Information_Store\Device_Information_Store\obj\x86\Debug\Device_Information_Store.MainForm.resources
