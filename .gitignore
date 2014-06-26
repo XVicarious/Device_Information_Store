@@ -35,7 +35,5 @@ Icon
 .Spotlight-V100
 .Trashes
 
-*.exe
-*.pdb
-*.cache
-*.Cache
+*/bin
+*/obj
