@@ -72,15 +72,16 @@
             // computerToolStripMenuItem
             // 
             this.computerToolStripMenuItem.Name = "computerToolStripMenuItem";
-            this.computerToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.computerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.computerToolStripMenuItem.Text = "Computer";
             this.computerToolStripMenuItem.Click += new System.EventHandler(this.computerToolStripMenuItem_Click);
             // 
             // otherDeviceToolStripMenuItem
             // 
             this.otherDeviceToolStripMenuItem.Name = "otherDeviceToolStripMenuItem";
-            this.otherDeviceToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.otherDeviceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.otherDeviceToolStripMenuItem.Text = "Other Device";
+            this.otherDeviceToolStripMenuItem.Click += new System.EventHandler(this.otherDeviceToolStripMenuItem_Click);
             // 
             // refreshDeviceListToolStripMenuItem
             // 

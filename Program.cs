@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Device_Information_Store
 {
@@ -15,6 +17,14 @@ namespace Device_Information_Store
         [STAThread]
         static void Main()
         {
+            if (!File.Exists("deviceList.xml"))
+            {
+                XmlSerializer s = new XmlSerializer(deviceStoreList.GetType());
+                using (TextWriter w = new StreamWriter("deviceList.xml"))
+                {
+                    s.Serialize(w, deviceStoreList);
+                }
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             formMain = new MainForm();

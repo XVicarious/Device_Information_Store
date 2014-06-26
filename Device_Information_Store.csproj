@@ -68,6 +68,18 @@
     <Compile Include="AddComputerForm.Designer.cs">
       <DependentUpon>AddComputerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddOtherDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOtherDevice.Designer.cs">
+      <DependentUpon>AddOtherDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPersistantRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPersistantRoute.Designer.cs">
+      <DependentUpon>AddPersistantRoute.cs</DependentUpon>
+    </Compile>
     <Compile Include="Computer.cs" />
     <Compile Include="Device.cs" />
     <Compile Include="Form1.cs">
@@ -88,6 +100,12 @@
     <Compile Include="Route.cs" />
     <EmbeddedResource Include="AddComputerForm.resx">
       <DependentUpon>AddComputerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOtherDevice.resx">
+      <DependentUpon>AddOtherDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPersistantRoute.resx">
+      <DependentUpon>AddPersistantRoute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

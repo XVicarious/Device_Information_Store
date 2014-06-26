@@ -11,6 +11,8 @@ namespace Device_Information_Store
 
         public static Form1 formDeviceList;
         public static AddComputerForm formAddComputer;
+        public static AddOtherDevice formAddDevice;
+        public static DateTime lastModified { get; set; }
 
         public MainForm()
         {
@@ -51,6 +53,11 @@ namespace Device_Information_Store
 
         private void saveDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            saveDatabase();
+        }
+
+        public void saveDatabase()
+        {
             XmlSerializer s = new XmlSerializer(Program.deviceStoreList.GetType());
             using (TextWriter w = new StreamWriter("deviceList.xml"))
             {
@@ -58,13 +65,36 @@ namespace Device_Information_Store
             }
         }
 
-        private void loadDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        public void loadDatabase()
         {
             XmlSerializer s = new XmlSerializer(Program.deviceStoreList.GetType());
+            lastModified = File.GetLastWriteTime("deviceList.xml");
             using (TextReader w = new StreamReader("deviceList.xml"))
             {
                 Program.deviceStoreList = (List<Device>)s.Deserialize(w);
             }
+        }
+
+        private void loadDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadDatabase();
+        }
+
+        public DateTime getCurrentModified()
+        {
+            return lastModified;
+        }
+
+        public void setCurrentModified(DateTime newDate)
+        {
+            lastModified = newDate;
+        }
+
+        private void otherDeviceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formAddDevice = new AddOtherDevice(null);
+            formAddDevice.MdiParent = this;
+            formAddDevice.Show();
         }
 
     }

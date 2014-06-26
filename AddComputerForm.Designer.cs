@@ -361,6 +361,7 @@
             this.buttonAddPersistRoute.TabIndex = 1;
             this.buttonAddPersistRoute.Text = "Add Persistant Route";
             this.buttonAddPersistRoute.UseVisualStyleBackColor = true;
+            this.buttonAddPersistRoute.Click += new System.EventHandler(this.buttonAddPersistRoute_Click);
             // 
             // listPersistantRoutes
             // 

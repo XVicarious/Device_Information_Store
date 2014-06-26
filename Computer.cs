@@ -68,5 +68,14 @@ namespace Device_Information_Store
             attachedDevices = new List<Device>();
             windowsKeys = new List<String>();
         }
+
+        public Boolean equals(Computer other)
+        {
+            if (this.deviceIP.getIPAddress() == other.deviceIP.getIPAddress())
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

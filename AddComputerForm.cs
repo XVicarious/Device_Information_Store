@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Device_Information_Store
@@ -15,6 +12,7 @@ namespace Device_Information_Store
         private Computer computer;
         private Computer oldComputer;
         private BindingSource sourceWinKeys = new BindingSource();
+        private BindingSource sourcePersist = new BindingSource();
 
         public AddComputerForm(Computer computer)
         {
@@ -24,6 +22,8 @@ namespace Device_Information_Store
                 this.computer = computer;
                 this.oldComputer = computer;
                 Program.deviceStoreList.Remove(oldComputer);
+                Program.formMain.saveDatabase();
+                Program.formMain.setCurrentModified(File.GetLastWriteTime("deviceList.xml"));
                 loadComputerObject();
             }
             else
@@ -46,10 +46,20 @@ namespace Device_Information_Store
             // Users Information
             // Attached Devices
             // Persistant Routes
+            sourcePersist.DataSource = this.computer.persistantRoutes;
+            this.listPersistantRoutes.DataSource = sourcePersist;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (File.GetLastWriteTime("deviceList.xml").CompareTo(Program.formMain.getCurrentModified()) > 0)
+            {
+                Program.formMain.loadDatabase();
+                if (Program.deviceStoreList.Contains(this.computer))
+                {
+                    Program.deviceStoreList.Remove(this.computer);
+                }
+            }
             if (computer == null)
             {
                 this.computer = new Computer(textDeviceName.Text);
@@ -67,6 +77,8 @@ namespace Device_Information_Store
             //this.computer.computerUsers = listUsers.Items;
             Program.deviceStoreList.Add(this.computer);
             Program.formMain.getFormDeviceList().refreshDeviceList();
+            Program.formMain.saveDatabase();
+            Program.formMain.setCurrentModified(File.GetLastWriteTime("deviceList.xml"));
             this.Close();
         }
 
@@ -88,7 +100,7 @@ namespace Device_Information_Store
             }
             foreach (String s in octs)
             {
-                if (Int32.Parse(0 + s) > 255 || Int32.Parse(0 + s) < 0)
+                if (s == "" || Int32.Parse(0 + s) > 255 || Int32.Parse(0 + s) < 0)
                 {
                     return false;
                 }
@@ -122,6 +134,18 @@ namespace Device_Information_Store
             }
             listWindowsKeys.DataSource = sourceWinKeys;
 
+        }
+
+        private void buttonAddPersistRoute_Click(object sender, EventArgs e)
+        {
+            using (AddPersistantRoute r = new AddPersistantRoute())
+            {
+                if (r.ShowDialog() == DialogResult.OK)
+                {
+                    this.computer.persistantRoutes.Add(new Route(new IPAddress(r.destination), new IPAddress(r.mask), new IPAddress(r.gateway)));
+                }
+            }
+            listPersistantRoutes.DataSource = sourcePersist;
         }
 
     }

@@ -7,18 +7,11 @@ namespace Device_Information_Store
     [XmlRoot("Route")]
     public class Route
     {
-        [XmlElement("routeDestination")]
-        public IPAddress destination;
-        [XmlElement("routeMask")]
-        public IPAddress mask;
-        [XmlElement("routeGateway")]
-        public IPAddress gateway;
+        public IPAddress[] routeL;
         public Route() { }
         public Route(IPAddress destination, IPAddress mask, IPAddress gateway)
         {
-            this.destination = destination;
-            this.mask = mask;
-            this.gateway = gateway;
+            routeL = new IPAddress[] { destination, mask, gateway };
         }
     }
 }
